@@ -1,0 +1,114 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.yulistiana.jetpackpro.lastsubmission"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        // API The Movie DB
+        buildConfigField("String", "TMDB_API", '"6eb2c581aa6e5bc51b03e85d3bf59219"')
+        buildConfigField("String", "TMDB_URL", '"https://api.themoviedb.org/3/"')
+        buildConfigField("String", "BASE_IMAGE", '"https://image.tmdb.org/t/p/"')
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation "androidx.test:rules:1.2.0"
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    def espresso_version = "3.2.0"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_version"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$espresso_version"
+
+    implementation 'com.gauravk.bubblenavigation:bubblenavigation:1.0.7'
+
+    implementation 'com.google.android.material:material:1.1.0'
+
+    def version_glide = "4.11.0"
+    implementation "com.github.bumptech.glide:glide:$version_glide"
+    annotationProcessor "com.github.bumptech.glide:compiler:$version_glide"
+
+    def version_viewModel = "2.2.0"
+    implementation "androidx.lifecycle:lifecycle-extensions:$version_viewModel"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$version_viewModel"
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$version_viewModel"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$version_viewModel"
+
+    def version_navigation = "2.2.2"
+    implementation "androidx.navigation:navigation-fragment:$version_navigation"
+    implementation "androidx.navigation:navigation-fragment-ktx:$version_navigation"
+    implementation "androidx.navigation:navigation-ui:$version_navigation"
+    implementation "androidx.navigation:navigation-ui-ktx:$version_navigation"
+
+    def version_mockito = "2.23.4"
+    testImplementation "org.mockito:mockito-core:$version_mockito"
+    testImplementation "org.mockito:mockito-inline:$version_mockito"
+
+    testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.1.0"
+
+    implementation "androidx.test.espresso:espresso-idling-resource:3.2.0"
+
+    def version_retrofit = "2.7.1"
+    implementation "com.squareup.retrofit2:retrofit:$version_retrofit"
+    implementation "com.squareup.retrofit2:converter-gson:$version_retrofit"
+
+    def version_okHttp3 = "4.4.0"
+    implementation "com.squareup.okhttp3:okhttp:$version_okHttp3"
+    implementation "com.squareup.okhttp3:okhttp-urlconnection:$version_okHttp3"
+    implementation "com.squareup.okhttp3:logging-interceptor:$version_okHttp3"
+
+    def version_coroutine = "1.3.1"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version_coroutine"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$version_coroutine"
+
+    def version_room = "2.2.5"
+    implementation "androidx.room:room-runtime:$version_room"
+    implementation "androidx.room:room-ktx:$version_room"
+    kapt "androidx.room:room-compiler:$version_room"
+
+    def version_dagger = "2.27"
+    implementation "com.google.dagger:dagger:$version_dagger"
+    implementation "com.google.dagger:dagger-android-support:$version_dagger"
+    kapt "com.google.dagger:dagger-android-processor:$version_dagger"
+    kapt "com.google.dagger:dagger-compiler:$version_dagger"
+
+    implementation "androidx.paging:paging-runtime:2.1.2"
+
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+}

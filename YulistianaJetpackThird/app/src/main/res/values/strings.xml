@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Kuy Nonton</string>
+    <string name="toolbar_movie">Movies</string>
+    <string name="toolbar_tvshow">TV Shows</string>
+    <string name="tab_movie">List Movie</string>
+    <string name="tab_tvshow">List TV Show</string>
+    <string name="bottom_nav_movie">Movie</string>
+    <string name="bottom_nav_tvshow">TV Show</string>
+    <string name="bottom_nav_favorite">Favorite</string>
+    <string name="toolbar_title_movie">Detail Movie</string>
+    <string name="toolbar_title_tvshow">Detail TV Show</string>
+    <string name="recommended_for_you">RECOMMENDED FOR YOU</string>
+    <string name="email_username">Email/Username</string>
+    <string name="kuy">KUY NONTON</string>
+    <string name="register_now">REGISTER NOW</string>
+    <string name="forgot_password">FORGOT PASSWORD?</string>
+    <string name="login">LOGIN</string>
+    <string name="password">Password</string>
+    <string name="or">OR</string>
+
+    <string name="desc_image_highlight">Image Highlight</string>
+    <string name="descriptionription">Description</string>
+
+    <!--Empty States-->
+    <string name="empty_state_title_no_conn">No internet connection</string>
+    <string name="empty_no_favorite_item">No favorites yet.</string>
+    <string name="empty_no_favorite_item_movie">You don\'t have a list of favorite movies</string>
+    <string name="empty_no_favorite_item_tvshow">You don\'t have a list of favorite tv show</string>
+
+</resources>
